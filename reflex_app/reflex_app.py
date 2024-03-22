@@ -7,6 +7,7 @@ class State(rx.State):
     "App State"
 
 
+@rx.page(route="/", title="Atish Panday")
 def index() -> rx.Component:
     return rx.vstack(
         rx.tabs.root(
