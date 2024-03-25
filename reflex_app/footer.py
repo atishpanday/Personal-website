@@ -13,7 +13,7 @@ def footer() -> rx.Component:
                 align="center",
             ),
             rx.hstack(
-                rx.link(rx.icon("phone", color="white"), href="tel:+14153423952"),
+                rx.link(rx.icon("phone", color="white"), href="tel:+14153413952"),
                 rx.link(
                     rx.icon("mail", color="white"), href="mailto:atishpanday1@gmail.com"
                 ),

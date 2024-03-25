@@ -11,8 +11,8 @@ class Education(rx.State):
     ]
 
     iit_skills = [
-        {"name": "C++", "prof": 80},
-        {"name": "MATLAB", "prof": 80},
+        {"name": "C++", "prof": 90},
+        {"name": "MATLAB", "prof": 85},
         {"name": "Python", "prof": 70},
         {"name": "ML", "prof": 50},
     ]
