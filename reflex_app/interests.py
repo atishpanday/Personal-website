@@ -23,6 +23,7 @@ def interests() -> rx.Component:
         leetcode(),
         public_speaking(),
         guitar(),
+        art(),
         other_interests(),
         width="100%",
         spacing="8",
@@ -99,6 +100,29 @@ def guitar() -> rx.Component:
             flex=1,
         ),
         spacing="6",
+    )
+
+
+def art() -> rx.Component:
+    return rx.hstack(
+        rx.vstack(
+            rx.heading("Art", size="7", color_scheme="indigo"),
+            rx.text("Probably the first thing I ever learnt was how to draw."),
+            rx.text(
+                "I owe all my creativity to my time spent sketching, painting, and just generally throwing colors around on a piece of paper as a child."
+            ),
+            rx.text("To the right is just one of many of my works."),
+            flex=1,
+        ),
+        rx.box(
+            rx.image(
+                src="/art.jpg",
+                width="100%",
+                height="auto",
+                border_radius="10px",
+            ),
+            flex=1,
+        ),
     )
 
 
