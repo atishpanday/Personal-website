@@ -106,6 +106,6 @@ def profession():
         ),
         height="120vh",
         width="70%",
-        margin_y="40px",
+        margin="40px",
         spacing="7",
     )

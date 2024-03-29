@@ -1,6 +1,9 @@
 import reflex as rx
 
-from . import about_me, profession, education, projects, footer
+from . import about_me, profession, education, projects, footer, blogs_list
+
+from .blogs.reflex_blog import reflex_blog
+from .blogs.vitejs_blog import vitejs_blog
 
 
 class State(rx.State):
@@ -16,6 +19,7 @@ def index() -> rx.Component:
                 rx.tabs.trigger("Experience", value="experience"),
                 rx.tabs.trigger("Education", value="education"),
                 rx.tabs.trigger("Projects", value="projects"),
+                rx.tabs.trigger("My Blogs", value="blogs"),
             ),
             rx.tabs.content(
                 rx.center(about_me.about_me()),
@@ -33,6 +37,10 @@ def index() -> rx.Component:
                 rx.center(projects.projects()),
                 value="projects",
             ),
+            rx.tabs.content(
+                rx.center(blogs_list.blogs_list()),
+                value="blogs",
+            ),
             default_value="about-me",
             width="100%",
         ),
@@ -42,3 +50,5 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
+app.add_page(reflex_blog)
+app.add_page(vitejs_blog)
