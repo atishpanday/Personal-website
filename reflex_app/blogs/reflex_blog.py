@@ -3,7 +3,7 @@ from .blog_layout import blog_layout
 
 
 @rx.page(route="/reflex-blog")
-def reflex_blog():
+def reflex_blog() -> rx.Component:
     return blog_layout(
         rx.vstack(
             rx.heading(

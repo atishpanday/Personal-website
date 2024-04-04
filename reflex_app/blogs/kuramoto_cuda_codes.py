@@ -1,11 +1,11 @@
-add_kernel = """__global__ void add_kernel(int* arr, int arr_size) {
+add_kernel: str = """__global__ void add_kernel(int* arr, int arr_size) {
     int id = threadIdx.x;
     if(id < arr_size) {
         arr[id] = arr[id] * arr[id];
     }
 }"""
 
-add_kernel_main_function = """int main() {
+add_kernel_main_function: str = """int main() {
     int arr[100];
     
     for(int i = 0; i < 100; i++) {
@@ -25,7 +25,7 @@ add_kernel_main_function = """int main() {
     return 0;
 }"""
 
-kuramoto_kernel = """#define lambda 0.05
+kuramoto_kernel: str = """#define lambda 0.05
 #define N 100
 
 __global__ void kuramoto(int *A, double *theta, double *w, double *k, double *prevk, int iter, double adder) {

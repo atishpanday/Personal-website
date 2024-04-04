@@ -4,7 +4,7 @@ from .kuramoto_cuda_codes import add_kernel, add_kernel_main_function, kuramoto_
 
 
 @rx.page(route="/kuramoto-cuda-blog")
-def kuramoto_cuda_blog():
+def kuramoto_cuda_blog() -> rx.Component:
     return blog_layout(
         rx.vstack(
             rx.heading(
@@ -12,6 +12,7 @@ def kuramoto_cuda_blog():
                 size="9",
                 color_scheme="indigo",
             ),
+            rx.text("Date posted: 4 April 2024", color_scheme="gray"),
             rx.heading("What is CUDA?", size="7", color_scheme="indigo"),
             rx.text(
                 "If you have a gaming PC, it contains either an NVIDIA or an AMD GPU."

@@ -3,7 +3,7 @@ from .blog_layout import blog_layout
 
 
 @rx.page(route="/vitejs-blog")
-def vitejs_blog():
+def vitejs_blog() -> rx.Component:
     return blog_layout(
         rx.vstack(
             rx.heading(

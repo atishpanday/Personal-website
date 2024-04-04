@@ -1,6 +1,6 @@
 import reflex as rx
 
-wisestep_skills = [
+wisestep_skills: list[str] = [
     "Java",
     "TypeScript",
     "React.js",
@@ -16,7 +16,7 @@ wisestep_skills = [
     "AWS",
 ]
 
-daffodil_skills = [
+daffodil_skills: list[str] = [
     "Typescript",
     "Javascript",
     "Java",
@@ -33,11 +33,11 @@ daffodil_skills = [
 ]
 
 
-def skill_badge(skill) -> rx.Component:
+def skill_badge(skill: str) -> rx.Component:
     return rx.badge(skill, size="2", color_scheme="indigo")
 
 
-def profession():
+def profession() -> rx.Component:
     return rx.vstack(
         rx.heading("Experience", size="9"),
         rx.hstack(

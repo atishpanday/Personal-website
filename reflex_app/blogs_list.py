@@ -1,7 +1,7 @@
 import reflex as rx
 
 
-def blogs_list():
+def blogs_list() -> rx.Component:
     return rx.vstack(
         rx.link(
             rx.card(
@@ -11,7 +11,10 @@ def blogs_list():
                         size="8",
                         color_scheme="indigo",
                     ),
-                    rx.text("Date: 1 April 2024", color_scheme="gray"),
+                    rx.text(
+                        "CUDA is a programming model developed by NVIDIA to run code on the GPU, taking advantage of parallelization across GPU cores. I explore how this can be used to solve Kuramoto oscillator equations using GPU parallelization."
+                    ),
+                    rx.text("Date: 4 April 2024", color_scheme="gray"),
                     justify="between",
                 ),
                 variant="classic",

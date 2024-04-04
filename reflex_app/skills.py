@@ -1,6 +1,6 @@
 import reflex as rx
 
-programming_languages = [
+programming_languages: list[dict] = [
     {"lang": "C++", "prof": 75, "total": 100},
     {"lang": "C", "prof": 85, "total": 100},
     {"lang": "Python", "prof": 95, "total": 100},
@@ -8,7 +8,7 @@ programming_languages = [
     {"lang": "Java", "prof": 60, "total": 100},
 ]
 
-technologies = [
+technologies: list[dict] = [
     {"tech": "React.js", "prof": 95},
     {"tech": "Angular.js", "prof": 60},
     {"tech": "Node.js", "prof": 85},

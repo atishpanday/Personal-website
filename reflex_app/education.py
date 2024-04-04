@@ -1,31 +1,30 @@
 import reflex as rx
 
 
-class Education(rx.State):
-    csu_skills = [
-        {"name": "Python", "prof": 90},
-        {"name": "R", "prof": 70},
-        {"name": "Tableau", "prof": 50},
-        {"name": "NLP", "prof": 90},
-        {"name": "DL", "prof": 75},
-    ]
+csu_skills: list[dict[str, int]] = [
+    {"name": "Python", "prof": 90},
+    {"name": "R", "prof": 70},
+    {"name": "Tableau", "prof": 50},
+    {"name": "NLP", "prof": 90},
+    {"name": "DL", "prof": 75},
+]
 
-    iit_skills = [
-        {"name": "C++", "prof": 90},
-        {"name": "MATLAB", "prof": 85},
-        {"name": "Python", "prof": 70},
-        {"name": "ML", "prof": 50},
-    ]
+iit_skills: list[dict[str, int]] = [
+    {"name": "C++", "prof": 90},
+    {"name": "MATLAB", "prof": 85},
+    {"name": "Python", "prof": 70},
+    {"name": "ML", "prof": 50},
+]
 
-    bit_skills = [
-        {"name": "C", "prof": 90},
-        {"name": "Java", "prof": 70},
-        {"name": "Unix", "prof": 85},
-        {"name": "DS/Algo", "prof": 75},
-    ]
+bit_skills: list[dict[str, int]] = [
+    {"name": "C", "prof": 90},
+    {"name": "Java", "prof": 70},
+    {"name": "Unix", "prof": 85},
+    {"name": "DS/Algo", "prof": 75},
+]
 
 
-def education():
+def education() -> rx.Component:
     return rx.vstack(
         rx.heading("Education", size="9"),
         rx.hstack(
@@ -44,7 +43,7 @@ def education():
                 rx.recharts.bar(data_key="prof", fill="#3a5bc7"),
                 rx.recharts.x_axis(type_="number"),
                 rx.recharts.y_axis(data_key="name", type_="category"),
-                data=Education.csu_skills,
+                data=csu_skills,
                 layout="vertical",
                 width=600,
                 height=300,
@@ -71,7 +70,7 @@ def education():
                 rx.recharts.bar(data_key="prof", fill="#3a5bc7"),
                 rx.recharts.x_axis(type_="number"),
                 rx.recharts.y_axis(data_key="name", type_="category"),
-                data=Education.iit_skills,
+                data=iit_skills,
                 layout="vertical",
                 width=600,
                 height=300,
@@ -96,7 +95,7 @@ def education():
                 rx.recharts.bar(data_key="prof", fill="#3a5bc7"),
                 rx.recharts.x_axis(type_="number"),
                 rx.recharts.y_axis(data_key="name", type_="category"),
-                data=Education.bit_skills,
+                data=bit_skills,
                 layout="vertical",
                 width=600,
                 height=300,

@@ -1,7 +1,7 @@
 import reflex as rx
 
 
-def projects():
+def projects() -> rx.Component:
     return rx.vstack(
         rx.heading("Projects", size="9"),
         rx.grid(
