@@ -2,8 +2,7 @@ import reflex as rx
 
 from . import about_me, profession, education, projects, footer, blogs_list
 
-from .blogs.reflex_blog import reflex_blog
-from .blogs.vitejs_blog import vitejs_blog
+from .blogs.kuramoto_cuda_blog import kuramoto_cuda_blog
 
 
 class State(rx.State):
@@ -50,5 +49,4 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
-app.add_page(reflex_blog)
-app.add_page(vitejs_blog)
+app.add_page(kuramoto_cuda_blog)
