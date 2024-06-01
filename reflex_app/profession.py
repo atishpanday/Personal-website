@@ -1,5 +1,14 @@
 import reflex as rx
 
+jobsflow_skills: list[str] = [
+    "Typescript",
+    "Nextjs",
+    ".NET framework",
+    "Langchain",
+    "Vercel SDK",
+    "Tailwind CSS",
+]
+
 wisestep_skills: list[str] = [
     "Java",
     "TypeScript",
@@ -32,6 +41,14 @@ daffodil_skills: list[str] = [
     "PostgreSQL",
 ]
 
+bit_skills: list[str] = [
+    "C",
+    "Arduino",
+    "LabVIEW",
+    "2D Fabrication",
+    "Semiconductors",
+]
+
 
 def skill_badge(skill: str) -> rx.Component:
     return rx.badge(skill, size="2", color_scheme="indigo")
@@ -40,6 +57,35 @@ def skill_badge(skill: str) -> rx.Component:
 def profession() -> rx.Component:
     return rx.vstack(
         rx.heading("Experience", size="9"),
+        rx.hstack(
+            rx.vstack(
+                rx.text("Present", weight="bold"),
+                rx.divider(orientation="vertical", size="4"),
+                rx.text("May 2024", weight="bold"),
+                height="100%",
+                justify="between",
+                align="end",
+                flex=1,
+            ),
+            # rx.divider(orientation="vertical", size="4"),
+            rx.vstack(
+                rx.heading("Full Stack Engineer", size="6", color_scheme="indigo"),
+                rx.heading("Jobsflow.ai", size="4", color_scheme="gray"),
+                rx.text(
+                    "Full-stack independent contributor, developing responsive applications using Next.js and .NET Framework."
+                ),
+                rx.text(
+                    "Optimizing performance and user experience for mobile, desktop, and tablet screens using Tailwind CSS."
+                ),
+                rx.text(
+                    "Implementing backend functionalities with LangChain, ensuring scalability and maintainability."
+                ),
+                rx.hstack(rx.foreach(jobsflow_skills, skill_badge), wrap="wrap"),
+                flex=3,
+            ),
+            spacing="6",
+            width="100%",
+        ),
         rx.hstack(
             rx.vstack(
                 rx.text("August 2022", weight="bold"),
@@ -73,6 +119,7 @@ def profession() -> rx.Component:
                 flex=3,
             ),
             spacing="6",
+            width="100%",
         ),
         rx.hstack(
             rx.vstack(
@@ -87,7 +134,7 @@ def profession() -> rx.Component:
             # rx.divider(orientation="vertical", size="4"),
             rx.vstack(
                 rx.heading(
-                    "Full Stack Engineer (Lead)", size="6", color_scheme="indigo"
+                    "Founding Software Engineer", size="6", color_scheme="indigo"
                 ),
                 rx.heading("Daffodil Health", size="4", color_scheme="gray"),
                 rx.text(
@@ -103,8 +150,35 @@ def profession() -> rx.Component:
                 flex=3,
             ),
             spacing="6",
+            width="100%",
         ),
-        height="120vh",
+        rx.hstack(
+            rx.vstack(
+                rx.text("January 2020", weight="bold"),
+                rx.divider(orientation="vertical", size="4"),
+                rx.text("November 2019", weight="bold"),
+                height="100%",
+                justify="between",
+                align="end",
+                flex=1,
+            ),
+            # rx.divider(orientation="vertical", size="4"),
+            rx.vstack(
+                rx.heading("Software Engineer", size="6", color_scheme="indigo"),
+                rx.heading("BIT Mesra", size="4", color_scheme="gray"),
+                rx.text(
+                    "Developed simulations and instrument control systems for 2D material fabrication using Arduino and C."
+                ),
+                rx.text(
+                    "Programmed various hardware components, ensuring accurate and efficient system operations."
+                ),
+                rx.hstack(rx.foreach(bit_skills, skill_badge), wrap="wrap"),
+                flex=3,
+            ),
+            spacing="6",
+            width="100%",
+        ),
+        height="240vh",
         width="70%",
         margin="40px",
         spacing="7",
